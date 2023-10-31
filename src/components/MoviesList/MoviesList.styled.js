@@ -31,12 +31,7 @@ export const MovieLink = styled(Link)`
   }
 `;
 
-export const MovieImg = styled.img`
-  margin-bottom: 5px;
-  filter: grayscale(0.4);
 
-  transition: all 200ms ease-in-out;
-`;
 
 export const MovieName = styled.p`
   height: 100%;
