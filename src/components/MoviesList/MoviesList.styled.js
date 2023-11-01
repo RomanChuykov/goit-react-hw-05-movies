@@ -40,10 +40,4 @@ export const MovieName = styled.p`
   font-size: 18px;
   transition: all 200ms ease-in-out;
 `;
-export const MovieImg = styled.img`
-  margin-bottom: 5px;
-  filter: grayscale(0.4);
-
-  transition: all 200ms ease-in-out;
-`;
 
