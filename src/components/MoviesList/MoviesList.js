@@ -9,7 +9,7 @@ import {
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
-  const imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+  
 
   return (
     <MovieList>
