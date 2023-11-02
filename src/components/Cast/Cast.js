@@ -8,7 +8,7 @@ export const Cast = () => {
   const [cast, setCast] = useState(null);
   const { movieId } = useParams();
   const imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
-
+  
   useEffect(() => {
     getMovieCast(movieId).then(setCast);
   }, [movieId]);
@@ -23,7 +23,11 @@ export const Cast = () => {
 
       {cast.map(({ id, profile_path, name, character }) => (
         <Item key={id}>
-          <Img src={imgBaseUrl.concat(profile_path)} alt="" />
+          {profile_path ? (
+        <Img src={imgBaseUrl.concat(profile_path)} alt="" />
+      ) : (
+        <Img src={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="Placeholder" />
+      )}
           <div>
             <Name>{name}</Name>
             <Character>{character}</Character>
